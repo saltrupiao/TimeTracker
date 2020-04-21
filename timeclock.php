@@ -14,8 +14,6 @@
 
 <body>
 
-<h1 style="text-align: center;">Time Clock</h1>
-
 <!-- Source: https://stackoverflow.com/questions/14563234/php-with-javascript-code-live-clock -->
 
 <?php
@@ -28,13 +26,11 @@ if(@$_GET["action"]=="getTime"){
 ?>
 
 <nav class="nav nav-pills nav-fill">
-    <a class="nav-item nav-link active" href="index.php">Home</a>
-    <a class="nav-item nav-link" href="timeclock.php">Timeclock</a>
+    <a class="nav-item nav-link" href="admin.php">Home</a>
+    <a class="nav-item nav-link active" href="timeclock.php">Timeclock</a>
 </nav>
 
 <div id="qwe" class="timeclocklarge"></div>
-
-
 
 <script type="text/javascript">
     window.onload = startInterval;
@@ -103,6 +99,12 @@ if(@$_GET["action"]=="getTime"){
         this.callback = callbackFunction || function (){};
     }
 </script>
+
+<div class="container">
+    <div class="col-sm">
+        <button type="submit" class="btn btn-primary m-10">Clock In</button>
+    </div>
+</div>
 
 </body>
 </html>
