@@ -27,7 +27,7 @@ if(@$_GET["action"]=="getTime"){
 
 <nav class="nav nav-pills nav-fill">
     <a class="nav-item nav-link" href="admin.php">Home</a>
-    <a class="nav-item nav-link active" href="timeclock.php">Timeclock</a>
+    <a class="nav-item nav-link active" href="index.php">Timeclock</a>
 </nav>
 
 <div id="qwe" class="timeclocklarge"></div>

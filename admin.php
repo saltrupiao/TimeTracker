@@ -14,7 +14,7 @@
 <body>
 <nav class="nav nav-pills nav-fill">
     <a class="nav-item nav-link active" href="admin.php">Home</a>
-    <a class="nav-item nav-link" href="timeclock.php">Timeclock</a>
+    <a class="nav-item nav-link" href="index.php">Timeclock</a>
 </nav>
 
 <div class="container">
