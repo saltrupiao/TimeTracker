@@ -31,10 +31,16 @@ if ($conn->query($sql) === TRUE) {
 $conn->close();
 */
 
-$sqlGetLstID = "SELECT MAX(timeID) AS max FROM timetable";
-$result2 = $conn->query($sqlGetLstID);
+$lastID = 0;
 
-$sql = "UPDATE timetable SET timeOut='$timeOut' WHERE timeID=$result2";
+$sqlGetLstID = "SELECT MAX(timeID) AS max FROM timetable";
+if ($result = $conn->query($sqlGetLstID)) {
+    while ($row2 = $result->fetch_row()) {
+        $lastID = $row2[0];
+    }
+}
+
+$sql = "UPDATE timetable SET timeOut='$timeOut' WHERE timeID=$lastID";
 
 if ($conn->query($sql) === TRUE) {
     echo "Record updated successfully";
