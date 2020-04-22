@@ -19,13 +19,10 @@ if ($conn->connect_error) {
 }
 
 $dateIn = date('Y-m-d H:i:s');;
-$timeIn = filter_input(INPUT_POST, 'timeIn');
-$timeOut = filter_input(INPUT_POST, 'timeOut');
-$clientIn = filter_input(INPUT_POST, 'clientIn');
-$description = filter_input(INPUT_POST, 'description');
+$timeIn = date('H:i:s');
 
-$sql = "INSERT INTO timetable (date, timeIn, timeOut, clientIn, description)
-VALUES ('$dateIn', '$timeIn', '$timeOut', '$clientIn', '$description')";
+$sql = "INSERT INTO timetable (date, timeIn)
+VALUES ('$dateIn', '$timeIn')";
 
 if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";

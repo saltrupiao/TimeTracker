@@ -34,12 +34,6 @@
                 <div class=\"col-lg-12 pb-4\">
                 <form action=\"doNewEntry.php\" class=\"was-validated\" method=\"post\">";
         echo "<div class=\"form-group\">
-                    <label for=\"invNum\">Entry ID:</label>
-                    <input type=\"text\" class=\"form-control\" placeholder=\"Enter Invoice ID\" name=\"timeID\" required>
-                    <div class=\"valid-feedback\">Valid.</div>
-                    <div class=\"invalid-feedback\">Please fill out this field.</div>
-                  </div>";
-        echo "<div class=\"form-group\">
                     <label for=\"invAgtID\">Date:</label>
                     <input type=\"text\" class=\"form-control\" placeholder=\"Enter agent ID\" name=\"date\" required>
                     <div class=\"valid-feedback\">Valid.</div>
@@ -70,7 +64,7 @@
                     <div class=\"invalid-feedback\">Please fill out this field.</div>
                   </div>";
 
-        echo "<button type=\"submit\" name=\"action\" class=\"btn btn-primary\" value=\"create\">Submit</button>";
+        echo "<button type=\"submit\" name=\"action\" class=\"btn btn-primary\">Submit</button>";
         echo "</form></div></div></div></body></html>";
 
 ?>

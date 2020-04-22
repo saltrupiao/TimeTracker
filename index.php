@@ -100,9 +100,18 @@ if(@$_GET["action"]=="getTime"){
     }
 </script>
 
-<div class="container">
-    <div class="col-sm">
-        <button type="submit" class="btn btn-primary m-10">Clock In</button>
+<div class="container justify-content-center">
+    <div class="row justify-content-center">
+        <div class="col-sm justify-content-center">
+            <form method="post" action="doClockIn.php">
+                <button type="submit" name="in" class="btn btn-primary justify-content-center">Clock IN</button>
+            </form>
+        </div>
+        <div class="col-sm justify-content-center">
+            <form method="post" action="doClockOut.php">
+                <button type="submit" name="out" class="btn btn-primary justify-content-center">Clock OUT</button>
+            </form>
+        </div>
     </div>
 </div>
 
