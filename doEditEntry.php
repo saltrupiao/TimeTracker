@@ -19,17 +19,16 @@ if ($conn->connect_error) {
 }
 
 $timeID = filter_input(INPUT_POST, 'timeID');
-$dateIn = date('Y-m-d H:i:s');;
+$dateIn = date('Y-m-d');;
 $timeIn = filter_input(INPUT_POST, 'timeIn');
 $timeOut = filter_input(INPUT_POST, 'timeOut');
-$clientIn = filter_input(INPUT_POST, 'clientIn');
+$clientIn = filter_input(INPUT_POST, 'client');
 $description = filter_input(INPUT_POST, 'description');
 
-$sql = "INSERT INTO timetracker (timeID, dateIn, timeIn, timeOut, clientIn, description)
-VALUES ('$timeID', '$dateIn', '$timeIn', '$timeOut', '$clientIn', '$description')";
+$sql = "UPDATE timetable SET date='$dateIn', timeIn='$timeIn', timeOut='$timeOut', client='$clientIn', description='$description' WHERE timeID='$timeID'";
 
 if ($conn->query($sql) === TRUE) {
-    echo "New record created successfully";
+    echo "Record updated successfully";
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }

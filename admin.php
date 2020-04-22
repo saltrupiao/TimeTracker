@@ -55,14 +55,14 @@
                             die("Connection failed: " . $conn->connect_error);
                         }
 
-                        $sql = "SELECT * FROM timetable";
+                        $sql = "SELECT * FROM timetable ORDER BY timeID DESC";
                         $result = $conn->query($sql);
 
                         if ($result->num_rows > 0) {
                             // output data of each row
                             while($row = $result->fetch_assoc()) {
                                 //echo "id: " . $row["id"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
-                                echo "<form method='get' action='editEntry.php'>";
+                                echo "<form method='post' action='editEntry.php'>";
                                 echo "<tr><td>";
                                 echo $row["timeID"];
                                 echo "</td><td>";

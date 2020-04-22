@@ -1,12 +1,12 @@
 <?php
-if(!empty($_GET['editEntry'])){
+if(!empty($_POST['editEntry'])){
     //DB details
     $dbHost = 'localhost';
     $dbUsername = 'root';
     $dbPassword = 'oakland';
     $dbName = 'timetracker';
 
-    $timeIDForm = $_GET['editEntry'];
+    $timeIDForm = $_POST['editEntry'];
 
     //Create connection and select DB
     $db = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
@@ -46,37 +46,37 @@ if(!empty($_GET['editEntry'])){
 
         echo "<div class=\"form-group\">
                     <label for=\"invNum\">Entry ID:</label>
-                    <input type=\"text\" class=\"form-control\" placeholder=\"Enter Invoice ID\" name=\"timeID\" value='{$rowStaticInvData['timeID']}' required>
+                    <input type=\"text\" class=\"form-control\" name=\"timeID\" value='{$rowStaticInvData['timeID']}' required>
                     <div class=\"valid-feedback\">Valid.</div>
                     <div class=\"invalid-feedback\">Please fill out this field.</div>
                   </div>";
         echo "<div class=\"form-group\">
                     <label for=\"invAgtID\">Date:</label>
-                    <input type=\"text\" class=\"form-control\" placeholder=\"Enter agent ID\" name=\"date\" value='{$rowStaticInvData['date']}' required>
+                    <input type=\"text\" class=\"form-control\" name=\"date\" value='{$rowStaticInvData['date']}' required>
                     <div class=\"valid-feedback\">Valid.</div>
                     <div class=\"invalid-feedback\">Please fill out this field.</div>
                   </div>";
         echo "<div class=\"form-group\">
                     <label for=\"invCliID\">Time In:</label>
-                    <input type=\"text\" class=\"form-control\" placeholder=\"Enter client ID\" name=\"timeIn\" value='{$rowStaticInvData['timeIn']}' required>
+                    <input type=\"text\" class=\"form-control\" name=\"timeIn\" value='{$rowStaticInvData['timeIn']}' required>
                     <div class=\"valid-feedback\">Valid.</div>
                     <div class=\"invalid-feedback\">Please fill out this field.</div>
                   </div>";
         echo "<div class=\"form-group\">
                     <label for=\"invTitle\">Time Out: </label>
-                    <input type=\"text\" class=\"form-control\" placeholder=\"Enter invoice title\" name=\"timeOut\" value='{$rowStaticInvData['timeOut']}' required>
+                    <input type=\"text\" class=\"form-control\" name=\"timeOut\" value='{$rowStaticInvData['timeOut']}' required>
                     <div class=\"valid-feedback\">Valid.</div>
                     <div class=\"invalid-feedback\">Please fill out this field.</div>
                   </div>";
         echo "<div class=\"form-group\">
                     <label for=\"invStatus\">Client:</label>
-                    <input type=\"text\" class=\"form-control\" placeholder=\"Enter invoice title\" name=\"client\" value='{$rowStaticInvData['client']}' required>
+                    <input type=\"text\" class=\"form-control\" name=\"client\" value='{$rowStaticInvData['client']}' required>
                     <div class=\"valid-feedback\">Valid.</div>
                     <div class=\"invalid-feedback\">Please fill out this field.</div>
                   </div>";
         echo "<div class=\"form-group\">
                     <label for=\"invStatus\">Work Description:</label>
-                    <input type=\"text\" class=\"form-control\" placeholder=\"Enter invoice title\" name=\"description\" value='{$rowStaticInvData['description']}' required>
+                    <input type=\"text\" class=\"form-control\" name=\"description\" value='{$rowStaticInvData['description']}' required>
                     <div class=\"valid-feedback\">Valid.</div>
                     <div class=\"invalid-feedback\">Please fill out this field.</div>
                   </div>";
