@@ -35,31 +35,31 @@
                 <form action=\"doNewEntry.php\" class=\"was-validated\" method=\"post\">";
         echo "<div class=\"form-group\">
                     <label for=\"invAgtID\">Date:</label>
-                    <input type=\"text\" class=\"form-control\" placeholder=\"Enter agent ID\" name=\"date\" required>
+                    <input type=\"text\" class=\"form-control\" placeholder=\"Enter date of work\" name=\"date\" required>
                     <div class=\"valid-feedback\">Valid.</div>
                     <div class=\"invalid-feedback\">Please fill out this field.</div>
                   </div>";
         echo "<div class=\"form-group\">
                     <label for=\"invCliID\">Time In:</label>
-                    <input type=\"text\" class=\"form-control\" placeholder=\"Enter client ID\" name=\"timeIn\" required>
+                    <input type=\"text\" class=\"form-control\" placeholder=\"Enter start time of work\" name=\"timeIn\" required>
                     <div class=\"valid-feedback\">Valid.</div>
                     <div class=\"invalid-feedback\">Please fill out this field.</div>
                   </div>";
         echo "<div class=\"form-group\">
                     <label for=\"invTitle\">Time Out: </label>
-                    <input type=\"text\" class=\"form-control\" placeholder=\"Enter invoice title\" name=\"timeOut\" required>
+                    <input type=\"text\" class=\"form-control\" placeholder=\"Enter end time of work\" name=\"timeOut\" required>
                     <div class=\"valid-feedback\">Valid.</div>
                     <div class=\"invalid-feedback\">Please fill out this field.</div>
                   </div>";
         echo "<div class=\"form-group\">
                     <label for=\"invStatus\">Client:</label>
-                    <input type=\"text\" class=\"form-control\" placeholder=\"Enter invoice title\" name=\"client\" required>
+                    <input type=\"text\" class=\"form-control\" placeholder=\"Enter client for work performed\" name=\"client\" required>
                     <div class=\"valid-feedback\">Valid.</div>
                     <div class=\"invalid-feedback\">Please fill out this field.</div>
                   </div>";
         echo "<div class=\"form-group\">
                     <label for=\"invStatus\">Work Description:</label>
-                    <input type=\"text\" class=\"form-control\" placeholder=\"Enter invoice title\" name=\"description\" required>
+                    <input type=\"text\" class=\"form-control\" placeholder=\"Enter a description of the completed work\" name=\"description\" required>
                     <div class=\"valid-feedback\">Valid.</div>
                     <div class=\"invalid-feedback\">Please fill out this field.</div>
                   </div>";

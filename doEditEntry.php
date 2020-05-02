@@ -29,7 +29,7 @@ $sql = "UPDATE timetable SET date='$dateIn', timeIn='$timeIn', timeOut='$timeOut
 
 if ($conn->query($sql) === TRUE) {
     echo "Record updated successfully";
-    header("location: index.php");
+    header("location: admin.php");
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }

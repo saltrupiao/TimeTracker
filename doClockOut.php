@@ -44,6 +44,7 @@ $sql = "UPDATE timetable SET timeOut='$timeOut' WHERE timeID=$lastID";
 
 if ($conn->query($sql) === TRUE) {
     echo "Record updated successfully";
+    header("location: index.php");
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
