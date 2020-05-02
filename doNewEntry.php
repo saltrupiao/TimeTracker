@@ -29,6 +29,7 @@ VALUES ('$dateIn', '$timeIn', '$timeOut', '$clientIn', '$description')";
 
 if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";
+    header("location: admin.php");
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
