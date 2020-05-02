@@ -42,7 +42,7 @@
                         </thead>
                         <tbody>
                         <?php
-                        //https://www.w3schools.com/php/php_mysql_select.asp
+                        //Source: https://www.w3schools.com/php/php_mysql_select.asp
                         $servername = "localhost";
                         $username = "root";
                         $password = "oakland";
