@@ -18,13 +18,13 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$dateIn = date('Y-m-d H:i:s');;
+$dateIn = date('Y-m-d');;
 $timeIn = filter_input(INPUT_POST, 'timeIn');
 $timeOut = filter_input(INPUT_POST, 'timeOut');
-$clientIn = filter_input(INPUT_POST, 'clientIn');
+$clientIn = filter_input(INPUT_POST, 'client');
 $description = filter_input(INPUT_POST, 'description');
 
-$sql = "INSERT INTO timetable (date, timeIn, timeOut, clientIn, description)
+$sql = "INSERT INTO timetable (date, timeIn, timeOut, client, description)
 VALUES ('$dateIn', '$timeIn', '$timeOut', '$clientIn', '$description')";
 
 if ($conn->query($sql) === TRUE) {
